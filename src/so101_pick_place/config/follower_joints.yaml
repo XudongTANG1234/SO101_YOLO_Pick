@@ -1,0 +1,76 @@
+# SO-101 follower calibration (from black_right.json)
+joints:
+  shoulder_pan:
+    id: 1
+    drive_mode: 0
+    homing_offset: 338
+    range_min: 766
+    range_max: 3466
+    p_coefficient: 16
+    i_coefficient: 0
+    d_coefficient: 32
+    return_delay_time: 0
+    acceleration: 254
+
+  shoulder_lift:
+    id: 2
+    drive_mode: 0
+    homing_offset: 78
+    range_min: 876
+    range_max: 3219
+    p_coefficient: 16
+    i_coefficient: 0
+    d_coefficient: 32
+    return_delay_time: 0
+    acceleration: 254
+
+  elbow_flex:
+    id: 3
+    drive_mode: 0
+    homing_offset: 944
+    range_min: 934
+    range_max: 3131
+    p_coefficient: 16
+    i_coefficient: 0
+    d_coefficient: 32
+    return_delay_time: 0
+    acceleration: 254
+
+  wrist_flex:
+    id: 4
+    drive_mode: 0
+    homing_offset: 1592
+    range_min: 754
+    range_max: 3030
+    p_coefficient: 16
+    i_coefficient: 0
+    d_coefficient: 32
+    return_delay_time: 0
+    acceleration: 254
+
+  wrist_roll:
+    id: 5
+    drive_mode: 0
+    homing_offset: -1106
+    range_min: 14
+    range_max: 3922
+    p_coefficient: 16
+    i_coefficient: 0
+    d_coefficient: 32
+    return_delay_time: 0
+    acceleration: 254
+
+  gripper:
+    id: 6
+    drive_mode: 0
+    homing_offset: -403
+    range_min: 2013
+    range_max: 3538
+    p_coefficient: 16
+    i_coefficient: 0
+    d_coefficient: 32
+    return_delay_time: 0
+    acceleration: 254
+    max_torque_limit: 500
+    protection_current: 250
+    overload_torque: 25

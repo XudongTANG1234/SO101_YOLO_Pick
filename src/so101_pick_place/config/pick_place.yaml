@@ -1,0 +1,59 @@
+# SO-101 Pick & Place configuration
+# 카메라 위치는 robot base_link 기준 (m)
+# cam_pitch: 카메라가 아래를 보는 각도 (degree, 양수=아래)
+
+detect_and_locate:
+  ros__parameters:
+    model: "yolov8x.pt"
+    target_classes: ["teddy bear"]
+    confidence: 0.5
+    device: "cuda"
+    show_debug_view: true
+    cam_x: 0.08
+    cam_y: 0.03
+    cam_z: -0.01
+    cam_pitch: 15.0
+
+detect_and_locate_segment:
+  ros__parameters:
+    model: "yolov8x-seg.pt"
+    target_classes: ["teddy bear"]
+    confidence: 0.5
+    device: "cuda"
+    min_mask_pixels: 80
+    show_debug_view: true
+    show_pointcloud_view: false
+    pointcloud_max_points: 1500
+    pointcloud_update_interval: 5
+    mask_erode_iterations: 2
+    depth_sigma_clip: 2.0
+    geometry_percentile_low: 5.0
+    geometry_percentile_high: 95.0
+    temporal_alpha: 0.25
+    position_history_size: 5
+    cam_x: 0.08
+    cam_y: 0.03
+    cam_z: -0.01
+    cam_pitch: 15.0
+
+pick_place:
+  ros__parameters:
+    pre_grasp_offset: 0.0
+    standoff_distance: 0.0
+    final_approach_distance: 0.05
+    use_dynamic_final_approach: true
+    dynamic_approach_scale: 0.5
+    dynamic_approach_margin: 0.005
+    dynamic_approach_min: 0.01
+    dynamic_approach_max: 0.05
+    use_thickness_for_approach: true
+    gripper_open_ratio: 0.8
+    use_dynamic_gripper_open: true
+    gripper_width_margin_m: 0.01
+    gripper_width_reference_m: 0.09
+    dynamic_gripper_open_min: 0.35
+    dynamic_gripper_open_max: 1.0
+    final_insertion_step_distance: 0.005
+    gripper_open_delay_sec: 0.10
+    max_velocity: 0.3
+    max_acceleration: 0.3
