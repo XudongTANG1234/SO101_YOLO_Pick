@@ -1,5 +1,7 @@
 # Demo
-
+<div align="center">
+  <img src="./media/demo0.webp" width="480px" alt="Remote Control Demo">
+</div>
 
 # Hardware
  - So-101 Follower Arm 
