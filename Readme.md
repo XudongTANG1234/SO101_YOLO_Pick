@@ -1,13 +1,13 @@
 # Hardware
-So-101 Follower Arm
-Realsense D435i Camera
-Objects in COCO dataset (YOLO)
-Camera Mount: https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_RealSense_D435
+ - So-101 Follower Arm 
+ - Realsense D435i Camera
+ - Objects in COCO dataset (YOLO)
+ - Camera Mount: https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Wrist_Cam_Mount_RealSense_D435
 
 # Environment
-Ubuntu 24.04.5
-ROS2 Jazzy
-Python3 
+ - Ubuntu 24.04.5
+ - ROS2 Jazzy
+ - Python3 
 
 # Environment Preparation
 ## Environment and location 
