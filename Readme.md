@@ -1,6 +1,6 @@
 # Demo
 <div align="center">
-  <img src="./media/demo0.webp" width="480px" alt="Remote Control Demo">
+  <img src="./media/demo0.webp" width="480px" alt="Demo">
 </div>
 
 # Hardware
