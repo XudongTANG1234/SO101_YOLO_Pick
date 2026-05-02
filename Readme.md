@@ -11,10 +11,13 @@ Python3
 
 # Environment Preparation
 ## Environment and location 
+```bash
 cd SO101_YOLO_Pick
 conda deactivate
+```
 
 ## Install ROS
+```bash
 sudo apt update
 sudo apt install -y \
   ros-jazzy-moveit \
@@ -28,8 +31,9 @@ sudo apt install -y \
   ros-jazzy-tf2-ros \
   ros-jazzy-rviz2 \
   ros-jazzy-rmw-cyclonedds-cpp
-
+```
 ## Install Python package
+```bash
 python3 -m pip install -U pip --break-system-packages
 python3 -m pip install --break-system-packages \
   numpy \
@@ -37,41 +41,53 @@ python3 -m pip install --break-system-packages \
   matplotlib \
   ultralytics \
   pyrealsense2
-
+```
 ## Install C++ package
+```bash
 sudo apt install librange-v3-dev
 sudo apt install libserial-dev
+```
 
 # Run
 ## Build workspace
+```bash
 source /opt/ros/jazzy/setup.bash
 colcon build
 source install/setup.bash
-
+```
 ## Test robot connection
+```bash
 ls /dev/ttyACM*
 lsusb | grep -i intel
-
-## Launch 
+```
+## Launch
+```bash
 ros2 launch so101_pick_place pick_place.launch.py
-
+```
 Note: 
-default usb_port:/dev/ttyACM0, for/dev/ttyACM1, run: 
+default usb_port:/dev/ttyACM0, for/dev/ttyACM1, run:
+```bash
 ros2 launch so101_pick_place pick_place.launch.py usb_port:=/dev/ttyACM1
+```
 
 # Pick 
 Open a new terminal
 ## ROS2 and workspace
+```bash
 source /opt/ros/jazzy/setup.bash
 source /home/sean/Unitree_Go2/so101_pick/install/setup.bash
+```
 ## When the object is detected, send pick command
+```bash
 ros2 topic pub --times 3 --rate 2 /pick_place_cmd std_msgs/String "data: 'pick'"
-
+```
 
 # Modify Object:
 1. modify target_classes in 
 src/so101_pick_place/config/pick_place.yaml
-2. Build 
+2. Build
+```bash
 source /opt/ros/jazzy/setup.bash
 colcon build --packages-select so101_pick_place
+```
 
