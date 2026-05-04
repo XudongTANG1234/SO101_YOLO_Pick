@@ -1,5 +1,7 @@
 # SO101_YOLO_Pick
 
+This is an immature project, I have to admit. The camera should be fixed, but the performance is not so good. The general accuracy is still limited. 
+
 ## Demo
 <div align="center">
   <img src="./media/demo0.webp" width="480px" alt="Demo">
